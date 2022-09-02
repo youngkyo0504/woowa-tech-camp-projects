@@ -1,0 +1,14 @@
+.statisticExpenditure .lineChart {
+    padding: 30px 20px;
+    padding-left: 26px;
+    background: var(--color-Off_White);
+
+    border: 1px solid var(--color-Line);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.statisticExpenditure .details {
+    width: 100%;
+    margin: 80px 0;
+}

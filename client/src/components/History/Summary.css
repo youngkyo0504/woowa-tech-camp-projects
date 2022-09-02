@@ -1,0 +1,41 @@
+.historySummary {
+    width: 100%;
+    margin-top: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    color: var(--color-Primary);
+}
+
+.historySummary .controller {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+.historySummary .controller > span {
+    padding-top: 4px;
+}
+.historySummary .toggleButton {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-left: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+    border: 2px solid var(--color-Label);
+    background-color: transparent;
+}
+
+.historySummary .activeButton {
+    border: 2px solid var(--color-Primary);
+    background-color: var(--color-Primary);
+}
+.historySummary .inactiveAmount {
+    color: var(--color-Label);
+}

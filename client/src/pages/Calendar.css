@@ -1,0 +1,98 @@
+.calendar {
+    width: 100%;
+    max-width: 850px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.calendar .calendarHeader {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    color: var(--color-Label);
+    background: var(--color-Off_White);
+
+    border: 1px solid var(--color-Line);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.calendar .calendarHeader > span {
+    flex: 1;
+    text-align: center;
+}
+
+.calendar .calendarBody {
+    margin-bottom: 24px;
+    background: var(--color-Off_White);
+    border: 1px solid var(--color-Line);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-spacing: 0px;
+}
+
+.calendar .calendarBody td {
+    width: 120px;
+    height: 120px;
+
+    border-right: 1px solid var(--color-Line);
+    border-bottom: 1px solid var(--color-Line);
+
+    overflow: hidden;
+}
+.calendar .calendarBody td:last-child {
+    border-right: none;
+}
+.calendar .calendarBody tr:last-child td {
+    border-bottom: none;
+}
+
+.calendar .tableItem {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+}
+.calendar .incomeItem {
+    color: var(--color-Primary);
+}
+.calendar .paidItem {
+    color: var(--color-Error);
+}
+.calendar .dayItem {
+    color: var(--color-Label);
+    font-size: 14px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+.calendar .footer {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 0 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--color-Label);
+}
+
+.calendar .footerInfos {
+    display: flex;
+    gap: 8px;
+}

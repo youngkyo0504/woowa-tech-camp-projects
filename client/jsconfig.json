@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "checkJs": false,
+        "baseUrl": "./src",
+        "paths": {
+            "@apis/*": ["./apis/*"],
+            "@components/*": ["./components/*"],
+            "@core/*": ["./core/*"],
+            "@icons/*": ["./icons/*"],
+            "@pages/*": ["./pages/*"],
+            "@store/*": ["./store/*"],
+            "@utils/*": ["./utils/*"],
+            "@src/*": ["./*"]
+        },
+        "moduleResolution": "node"
+    },
+    "exclude": ["node_modules"]
+}

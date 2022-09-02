@@ -1,0 +1,190 @@
+.accountForm {
+    font-family: "Noto Sans KR";
+    position: relative;
+    display: flex;
+    flex: 0;
+    width: 100%;
+    height: 76px;
+    align-items: center;
+    background: var(--color-Off_White);
+    border: 1px solid var(--color-Placeholder);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.accountForm .inputBox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 16px 0px 16px 0px;
+}
+
+.accountForm .inputItem {
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 1px solid var(--color-Placeholder);
+    gap: 4px;
+}
+
+.accountForm .date {
+    padding-left: 32px;
+}
+.accountForm .date input {
+    width: 90px;
+}
+.accountForm .price {
+    padding-right: 18px;
+    border-right: 0px;
+}
+
+.accountForm .label {
+    color: var(--color-Primary);
+}
+.accountForm input::placeholder {
+    color: var(--color-Label);
+}
+.accountForm input {
+    width: 80px;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+}
+.accountForm .content input {
+    width: 172px;
+}
+
+.accountForm input:focus {
+    background-color: transparent;
+}
+
+.accountForm .price input {
+    width: 96px;
+}
+
+.accountForm .saveButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-Primary);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.accountForm .saveButton.active {
+    background-color: var(--color-Primary);
+}
+.accountForm .dropdown {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+}
+.accountForm .dropdownInput {
+    width: 80px;
+    color: var(--color-Label);
+}
+.accountForm .dropdownInput.active {
+    color: var(--color-Title_Active);
+}
+
+.accountForm .smallIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.accountForm .dropdownPanel {
+    border: 1px solid var(--color-Line);
+    /* Elevation1 */
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background-color: var(--color-Off_White);
+}
+
+.accountForm .panelItemContainer {
+    padding: 0px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.accountForm .panelItemContainer:last-child .panelItem {
+    border-bottom: 0;
+}
+
+.accountForm .panelItem {
+    user-select: none;
+    width: 100%;
+    padding: 16px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--color-Line);
+}
+.accountForm button.panelItem {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /* border-bottom: none; */
+}
+
+/* minus icon plus icon */
+
+.form-payment-sign {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 10px;
+    margin-right: 12px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: var(--color-Off_White);
+    color: var(--color-Label);
+    cursor: pointer;
+}
+
+.form-payment-sign::before,
+.form-payment-sign::after {
+    content: "";
+    width: 12px;
+    height: 2px;
+
+    display: inline-block;
+    position: relative;
+    top: -2px;
+
+    background-color: var(--color-Title_Active);
+    border-radius: 10px;
+    transition: transform 0.1s ease-out;
+}
+.form-payment-sign::after {
+    top: -17px;
+}
+.form-payment-sign-plus::after {
+    transform: rotate(90deg);
+}
+
+.priceInputContainer {
+    display: flex;
+    align-items: center;
+}
+
+/* .payment_sign_container {
+    position: relative;
+} */

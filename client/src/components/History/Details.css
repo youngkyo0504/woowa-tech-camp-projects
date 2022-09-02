@@ -1,0 +1,81 @@
+.historyDetail {
+    width: 100%;
+}
+
+.historyDetail .info {
+    width: 100%;
+    margin: 32px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.historyDetail .infoLocaleDate {
+    color: var(--color-Title_Active);
+}
+
+.historyDetail .infoDay {
+    margin: 0 8px;
+    color: var(--color-Body);
+}
+
+.historyDetail .totals {
+    display: flex;
+    column-gap: 8px;
+    color: var(--color-Body);
+}
+
+.historyDetail .item {
+    width: 100%;
+    height: 70px;
+    padding: 20px 12px;
+
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    border-bottom: 1px solid var(--color-Line);
+}
+.historyDetail .itemHoverAble {
+    cursor: pointer;
+}
+.historyDetail .itemHoverAble:hover {
+    background-color: var(--color-Line);
+}
+
+.historyDetail .info + .item {
+    border-top: 1px solid var(--color-Line);
+}
+
+.historyDetail .itemCategory {
+    width: 92px;
+    height: 30px;
+    padding: 4px 17px;
+
+    text-align: center;
+    line-height: 22px;
+    border-radius: 999px;
+    color: var(--color-Off_White);
+}
+
+.historyDetail .itemContent {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--color-Title_Active);
+}
+
+.historyDetail .itemPaymentMethod {
+    width: 200px;
+
+    text-align: start;
+    color: var(--color-Body);
+}
+
+.historyDetail .itemAmount {
+    width: 200px;
+
+    text-align: end;
+    color: var(--color-Title_Active);
+}
