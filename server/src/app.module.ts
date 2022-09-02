@@ -1,20 +1,24 @@
+import { ProductModule } from './product/product.module';
 import { Module } from '@nestjs/common';
-import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import validationSchema from './config/validationSchema';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MenuModule } from './menu/menu.module';
-import { OrderModule } from './order/order.module';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { UserModule } from './user/user.module';
+import { RegionModule } from './region/region.module';
+import { AuthenticationModule } from './authentication/authentication.module';
+import { APP_FILTER } from '@nestjs/core';
+import { HttpExceptionFilter } from './core/exception.filter';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
+import { UploadImageModule } from './upload-image/upload-image.module';
+import { ChatModule } from './chat/chat.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: `.env.${process.env.NODE_ENV ?? 'development'}`,
-      validationSchema,
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
@@ -26,19 +30,32 @@ import { join } from 'path';
         username: configService.get('DATABASE_USER'),
         password: configService.get('DATABASE_PASSWORD'),
         database: configService.get('DATABASE_NAME'),
-        entities: ['dist/**/*.entity.js'],
+        entities: [__dirname + '/**/entities/*.entity.{js,ts}'],
         synchronize: true,
-        timezone: 'Asia/Seoul',
+        namingStrategy: new SnakeNamingStrategy(),
+        extra: {
+          decimalNumbers: true,
+        },
       }),
     }),
     ServeStaticModule.forRoot({
       rootPath: join(process.cwd(), '..', 'client', 'build'),
       exclude: ['/api*', '/docs*'],
     }),
-    MenuModule,
-    OrderModule,
+    UserModule,
+    RegionModule,
+    AuthenticationModule,
+    ProductModule,
+    UploadImageModule,
+    ChatModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_FILTER,
+      useClass: HttpExceptionFilter,
+    },
+  ],
 })
 export class AppModule {}
