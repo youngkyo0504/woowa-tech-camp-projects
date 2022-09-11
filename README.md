@@ -58,6 +58,12 @@ yarn start
 </p>
 
 ## 실행 화면 
+- 리액트 mount,unmount 애니메이션 구현 
+<p align="center">
+ <img align="center"  height="600" src="https://user-images.githubusercontent.com/78121870/189512002-16585d55-cc34-4d0b-863c-5295489e6067.gif">
+</p>
+
+
 - 랜딩 페이지
 <p align="center">
   <img align="center" height="600" src="https://user-images.githubusercontent.com/78121870/188042805-2499fea4-e618-4f30-8b1b-159005f41539.png">
